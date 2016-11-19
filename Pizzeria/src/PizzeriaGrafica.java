@@ -20,7 +20,7 @@ public class PizzeriaGrafica {
 	
 	protected Shell shlPizzapp;
 	
-	Lista lista = new Lista(shlPizzapp);
+	Lista lista = new Lista();
 	
 	Cliente[] c= new Cliente[100];
 	int i = 0;
@@ -88,7 +88,7 @@ public class PizzeriaGrafica {
 		Label lblNewLabel = new Label(shlPizzapp, SWT.NONE);
 		lblNewLabel.setImage(SWTResourceManager.getImage(PizzeriaGrafica.class, "/images/closed.png"));
 		lblNewLabel.setBounds(292, 200, 142, 35);
-		formToolkit.adapt(lblNewLabel, true, true);
+		
 		
 		Button btnApri = new Button(shlPizzapp, SWT.NONE);
 		btnApri.addSelectionListener(new SelectionAdapter() {
@@ -131,7 +131,6 @@ public class PizzeriaGrafica {
 		Label label = new Label(shlPizzapp, SWT.NONE);
 		label.setBackground(SWTResourceManager.getColor(204, 255, 255));
 		label.setBounds(282, 33, 22, 15);
-		formToolkit.adapt(label, true, true);
 		label.setText("0");
 		
 		
@@ -171,7 +170,6 @@ public class PizzeriaGrafica {
 		Label lblTotPizze = new Label(shlPizzapp, SWT.NONE);
 		lblTotPizze.setBackground(SWTResourceManager.getColor(204, 255, 255));
 		lblTotPizze.setBounds(216, 33, 55, 15);
-		formToolkit.adapt(lblTotPizze, true, true);
 		lblTotPizze.setText("Tot pizze:");
 		
 		

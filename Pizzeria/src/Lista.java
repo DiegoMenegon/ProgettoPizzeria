@@ -1,15 +1,18 @@
+import java.awt.Component;
 import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
 
 import org.eclipse.swt.widgets.Shell;
 
 public class Lista {
 	private int numpizze = 0; // pizze da fare
 	private ArrayList<Ordine> ordini;
-	public Shell s;
+	public Component s;
 	
-	public Lista(Shell s) {
+	public Lista() {
 		ordini = new ArrayList<Ordine>();
-		this.s = s;
+		//this.s = s;
 	}
 	
 	public synchronized void inizia(){
@@ -57,7 +60,7 @@ public class Lista {
 			}
 		 }
 		 ordini.remove(0);
-		 System.out.println("L'ordine del cliente " + o.cl + " è pronto");
+		 JOptionPane.showMessageDialog(s, "L'ordine del cliente " + o.cl + " è pronto");
 		 notifyAll();
 	}
 }
